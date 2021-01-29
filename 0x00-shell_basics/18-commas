@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 -a -m -p -X
+ls * -1ampX
