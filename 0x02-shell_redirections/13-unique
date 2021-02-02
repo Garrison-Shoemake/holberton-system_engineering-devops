@@ -1,2 +1,2 @@
 #!/bin/bash
-uniq -d | short
+uniq -u | short
