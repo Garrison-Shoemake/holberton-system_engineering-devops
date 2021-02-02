@@ -1,2 +1,2 @@
 #!/bin/bash
-printf(%d, $DECIMAL)
+printf '%d, $DECIMAL'
