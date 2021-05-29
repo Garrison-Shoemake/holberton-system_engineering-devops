@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#this does the same as 1 and 2, but with an until loop
+counter=0
+until [ $counter -eq 10 ]
+do
+	echo "Holberton School"
+	((counter++))
+done
