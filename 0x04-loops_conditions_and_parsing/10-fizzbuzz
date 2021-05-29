@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# FIZZ BUZZ
+START=1
+s=$START
+while [ $s -le 100 ]
+do
+    if (( s % 3 && s % 5 == 0 ))
+    then
+	echo "FizzBuzz"
+    elif (( s % 3 == 0 ))
+    then
+	echo "Fizz"
+    elif (( s % 5 == 0 ))
+    then
+	echo "Buzz"
+    else
+	echo "$s"
+    fi
+    s=$((s+1))
+done
