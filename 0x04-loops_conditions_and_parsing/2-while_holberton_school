@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script uses a while loop instead of a for loop
+END=10
+x=$END
+while [ $x -gt 0 ]
+do
+    echo "Holberton School"
+    x=$((x-1))
+done
