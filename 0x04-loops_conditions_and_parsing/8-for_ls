@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #this script displays content like the ls command
-for entry in "$search_dir"./*
+for entry in *
 do
     echo "$entry" | cut -d "-" -f2
 done
