@@ -4,7 +4,7 @@
 
 print_info () {
     recordAndIP=$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
-    record=$($recordAndIP | awk '{print $1}')
+    record=$(echo $recordAndIP | awk '{print $1}')
     ip=$(echo $recordAndIP | awk '{print $2}')
 
     echo "The subdomain $2 is a $record record and points to $ip"
