@@ -1,24 +1,22 @@
 #!/usr/bin/env bash
-# looking up info from sites
+# Looking up info from <ProfPlum.tech>
 
 
-print_info () {
-    recordAndIP=$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
-    record=$(echo $recordAndIP | awk '{print $1}')
-    ip=$(echo $recordAndIP | awk '{print $2}')
-
-    echo "The subdomain $2 is a $record record and points to $ip"
+printInfo() {
+        recordAndIp=$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
+        record=$(echo $recordAndIp | awk '{print $1}')
+        ip=$(echo $recordAndIp | awk '{print $2}')
+        echo "The subdomain $2 is a $record record and points to $ip"
 }
-
 if [ $# -eq 1 ]
 then
-    # PRint all sub domains
-    print_info $1 www
-    print_info $1 lb-01
-    print_info $1 web-01
-    print_info $1 web-01
-elif [ $# -eq 2 ]
+        # Print all sub domains
+        printInfo $1 www
+        printInfo $1 lb-01
+        printInfo $1 web-01
+        printInfo $1 web-02
+elif [ "$#" -eq 2 ]
 then
-    #print just this sub domain
-    print_info $1 $2
+        # Print just this sub domain
+        printInfo $1 $2
 fi
