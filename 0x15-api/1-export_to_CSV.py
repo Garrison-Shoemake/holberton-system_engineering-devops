@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-
+""" prints to CSV format """
 import csv
 import requests
 import sys
 
 def save_tasks_to_csv(employeeId):
-
+    """ function to save to CSV """
     username = ''
     allTasks = []
 
