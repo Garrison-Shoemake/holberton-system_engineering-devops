@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" gathers data from API """
+
 #notes:
 # need to use sys to get input from terminal
 # need to look at API provided
@@ -11,7 +13,7 @@ import requests
 import sys
 
 def get_employee_tasks(employeeId):
-
+    """ gets the task of the employees """
     # variables
     name = ''
     task_list = []
